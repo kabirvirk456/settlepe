@@ -1,8 +1,9 @@
 <div x-data="{ openModal: false }"></div>
 <!-- ================= NAVBAR ================= -->
 <header class="fixed top-0 left-0 w-full z-50 bg-[#071b34]/95 backdrop-blur-md border-b border-white/10">
-
-<div class="max-w-7xl mx-auto px-6">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="w-full px-4 md:max-w-7xl md:mx-auto md:px-6">
 
     <div class="flex items-center justify-between h-[70px]">
 
@@ -111,14 +112,57 @@ body {
 html {
     scroll-behavior: smooth;
 }
+<style>
+/* MOBILE ONLY FIX */
+@media (max-width: 768px) {
+
+    /* Remove max-width container effect */
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl {
+        max-width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Reduce section spacing */
+    section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Reduce gaps */
+    .gap-10 { gap: 16px !important; }
+    .gap-8 { gap: 14px !important; }
+    .gap-6 { gap: 12px !important; }
+
+    /* Fix cards padding */
+    .p-6 { padding: 16px !important; }
+    .p-8 { padding: 18px !important; }
+
+    /* Fix grid stacking */
+    .md\:grid-cols-2,
+    .md\:grid-cols-3,
+    .md\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Make images tighter */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+</style>
 </style>
 
 </head>
 <!-- ================= HERO SECTION ================= -->
-<section id="home" class="relative overflow-hidden bg-[#07142b]">
+<section id="home" class="relative flex justify-center bg-[#07142b] pt-14 md:pt-18">
 
 <!-- CONTAINER -->
-<div class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+<div class="w-full px-4 md:max-w-7xl md:mx-auto md:px-6 py-12 md:py-20">
 
     <div class="grid md:grid-cols-2 gap-10 items-center">
 
@@ -185,7 +229,7 @@ html {
        <div class="relative flex justify-center">
 
     <!-- IMAGE CONTAINER (IMPORTANT) -->
-    <div class="relative w-full max-w-[480px]">
+    <div class="relative w-full>
 
         <!-- DARK CARD BACKGROUND -->
         <div class="absolute inset-0 bg-[#0b1f3a] rounded-2xl"></div>
@@ -202,7 +246,7 @@ html {
     </div>
 
     <!-- FLOATING TAGS -->
-    <div class="hidden md:block absolute right-[-20px] top-[60px] space-y-3">
+    <div class="hidden md:block absolute right-[-0px] top-[90px] space-y-3">
 
         <div class="bg-white text-sm px-4 py-2 rounded-lg shadow">
             Harassment Calls?
@@ -232,7 +276,7 @@ html {
 <!-- ================= CALCULATOR EXACT COMPACT ================= -->
 <section id="calculator"
  class="bg-[#f5f7fb] pt-16 pb-10">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="w-full px-4 md:max-w-7xl md:mx-auto md:px-6">
 
         <div class="bg-white rounded-[18px] border border-[#e5e7eb] shadow-sm px-8 py-6 -mt-6">
 
