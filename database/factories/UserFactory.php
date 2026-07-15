@@ -26,9 +26,18 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'role' => User::ROLE_CUSTOMER,
+            'mobile' => fake()->unique()->numerify('9#########'),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+            'age' => fake()->numberBetween(24, 60),
+            'gender' => fake()->randomElement(['male', 'female', 'non_binary', 'prefer_not_to_say']),
+            'pan_card' => strtoupper(fake()->bothify('?????####?')),
+            'income' => fake()->numberBetween(30000, 250000),
+            'cibil_profile_completed_at' => now(),
+            'sales_status' => 'cibil_fetched',
+            'priority' => 'normal',
             'remember_token' => Str::random(10),
         ];
     }
